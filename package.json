@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "date-fns": "^2.30.0",
+    "express": "^5.1.0",
+    "firebase": "^12.1.0",
+    "firebase-admin": "^13.4.0",
+    "react-bootstrap": "^2.10.10",
+    "react-router-dom": "^7.3.0",
+    "xlsx": "^0.18.5"
+  },
+  "name": "apontamentoperequete",
+  "version": "1.0.0",
+  "description": "\"# apontamentoweb\" \r \"# apontamentoweb\" \r \"# apontamentoweb\" \r \"# apontamentoweb\" \r \"# apontamentoweb\" \r \"# apontamentoweb\" \r \"# apontamentoweb\" \r \"# apontamentoweb\" \r \"# apontamentoPerequete\" \r \"# apontamentoPerequete\" \r \"# apontamentoPerequete\" \r \"# apontamentoPerequete\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hugozera/apontamentoPerequete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hugozera/apontamentoPerequete/issues"
+  },
+  "homepage": "https://github.com/Hugozera/apontamentoPerequete#readme"
+}

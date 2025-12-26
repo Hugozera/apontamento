@@ -1,0 +1,245 @@
+/* ===== Modal Impressão ===== */
+.modal-impressao-fullscreen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 9999;
+    overflow: auto;
+    display: block !important;
+    opacity: 1 !important;
+}
+
+.modal-impressao-content {
+    padding: 0;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.custom-centered-modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+    justify-content: center; /* centra horizontalmente também */
+}
+
+/* Opcional: limita largura máxima do modal do diálogo centralizado */
+.custom-centered-modal-dialog .modal-content {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+/* Em telas pequenas, mantém comportamento responsivo */
+@media (max-width: 576px) {
+    .custom-centered-modal-dialog .modal-content {
+        margin: 0 1rem;
+        width: calc(100% - 2rem);
+    }
+}
+/* ===== Container do Relatório ===== */
+.relatorio-container {
+    width: 100%;
+    max-width: 297mm;   /* largura máxima A4 paisagem */
+    min-height: 210mm;  /* altura mínima */
+    margin: 0 auto;     /* centralizar */
+    padding: 10mm;
+    font-family: "Arial", sans-serif;
+    font-size: 11px;
+    color: #000;
+    box-sizing: border-box;
+    overflow: hidden;   /* tira scroll interno */
+}
+
+/* ===== Cabeçalho ===== */
+.cabecalho-relatorio {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #333;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.info-empresa h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #222;
+}
+
+.info-empresa p, .info-funcionario p {
+    margin: 2px 0;
+    font-size: 11px;
+}
+
+.info-funcionario {
+    text-align: right;
+}
+
+/* ===== Período ===== */
+.periodo-relatorio {
+    text-align: center;
+    margin: 8px 0;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* ===== Tabela ===== */
+.tabela-registros {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+    font-size: 9px;   /* menor fonte pra caber */
+    table-layout: fixed;
+}
+
+.tabela-registros th,
+.tabela-registros td {
+    border: 1px solid #999;
+    padding: 3px 4px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+.tabela-registros th {
+    background: #f2f2f2;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.tabela-registros tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* ===== Largura das Colunas ===== */
+.tabela-registros th:nth-child(1), .tabela-registros td:nth-child(1) { width: 8%; }
+.tabela-registros th:nth-child(2), .tabela-registros td:nth-child(2) { width: 6%; }
+.tabela-registros th:nth-child(3), .tabela-registros td:nth-child(3) { width: 6%; }
+.tabela-registros th:nth-child(4), .tabela-registros td:nth-child(4) { width: 6%; }
+.tabela-registros th:nth-child(5), .tabela-registros td:nth-child(5) { width: 6%; }
+.tabela-registros th:nth-child(6), .tabela-registros td:nth-child(6) { width: 10%; }
+.tabela-registros th:nth-child(7), .tabela-registros td:nth-child(7) { width: 7%; }
+.tabela-registros th:nth-child(8), .tabela-registros td:nth-child(8) { width: 7%; }
+.tabela-registros th:nth-child(9), .tabela-registros td:nth-child(9) { width: 20%; }
+.tabela-registros th:nth-child(10),.tabela-registros td:nth-child(10){ width: 18%; }
+
+/* ===== Resumo ===== */
+.resumo-relatorio {
+    margin-top: 10px;
+    padding: 6px;
+    border: 1px solid #bbb;
+    background: #f9f9f9;
+    font-size: 9px;
+}
+
+.resumo-relatorio h4 {
+    margin: 0 0 5px 0;
+    font-size: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+}
+
+/* ===== Rodapé ===== */
+.rodape-relatorio {
+    margin-top: 12px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    padding-top: 8px;
+}
+
+.assinatura {
+    text-align: center;
+    width: 40%;
+}
+
+.assinatura .linha {
+    border-top: 1px solid #000;
+    margin-top: 25px;
+    font-size: 8px;
+}
+
+/* ===== Botões ===== */
+.controles-impressao {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10000;
+    background: white;
+    padding: 6px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.btn-imprimir, .btn-fechar {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn-imprimir { background: #007bff; color: white; }
+.btn-imprimir:hover { background: #0056b3; }
+.btn-fechar { background: #6c757d; color: white; }
+.btn-fechar:hover { background: #444; }
+
+/* ===== Impressão ===== */
+@media print {
+    @page {
+        size: A4 landscape; /* força habilitar opção de paisagem */
+        margin: 8mm;
+    }
+
+    body * {
+        visibility: hidden !important;
+    }
+
+    .modal-impressao-fullscreen,
+    .modal-impressao-fullscreen * {
+        visibility: visible !important;
+    }
+
+    .modal-impressao-fullscreen {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        overflow: visible !important; /* remove scroll */
+        height: auto !important;      /* ajusta altura */
+        max-height: none !important;
+    }
+
+    .controles-impressao {
+        display: none !important;
+    }
+
+    /* Forçar caber em 1 página */
+    .relatorio-container {
+        transform: scale(0.95); /* ajusta zoom */
+        transform-origin: top center;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    .tabela-registros {
+        font-size: 8px !important;
+        page-break-inside: avoid;
+    }
+
+    .tabela-registros th,
+    .tabela-registros td {
+        padding: 2px 3px !important;
+    }
+}

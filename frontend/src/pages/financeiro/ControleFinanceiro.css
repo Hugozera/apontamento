@@ -1,0 +1,1697 @@
+/* src/pages/financeiro/ControleFinanceiro.css */
+
+/* Dashboard Financeiro */
+.dashboard-financeiro {
+    margin-bottom: 2rem;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.card-content p {
+    margin: 0.25rem 0 0 0;
+    color: var(--text-muted);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.dashboard-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard-item h3 {
+    margin: 0 0 1rem 0;
+    color: var(--dark-color);
+}
+
+/* Remunerações */
+.remuneracoes-section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: var(--dark-color);
+}
+
+.remuneracoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.remuneracao-card {
+    border: 1px solid var(--light-color);
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--light-bg);
+}
+
+.remuneracao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.remuneracao-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--dark-color);
+}
+
+.status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.status.ativo {
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.status.inativo {
+    background: var(--danger-light);
+    color: var(--danger-color);
+}
+
+.remuneracao-info {
+    margin-bottom: 1rem;
+}
+
+.remuneracao-info p {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+    color: var(--text-color);
+}
+
+.remuneracao-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Modal Usuário */
+.modal-large {
+    max-width: 600px;
+}
+
+.usuarios-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.usuario-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--light-color);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.usuario-item:hover {
+    background: var(--light-bg);
+}
+
+.usuario-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+.usuario-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.usuario-info h4 {
+    margin: 0;
+    color: var(--dark-color);
+}
+
+.usuario-info p {
+    margin: 0.25rem 0 0 0;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.preview-calculo {
+    background: var(--info-light);
+    border: 1px solid var(--info-color);
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--info-color);
+}
+
+/* Acesso Negado */
+.acesso-negado {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.acesso-negado h2 {
+    color: var(--danger-color);
+    margin-bottom: 1rem;
+}
+
+/* Empty States */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+}
+
+.empty-state h3 {
+    margin: 1rem 0 0.5rem 0;
+    color: var(--dark-color);
+}
+
+/* Filtros Rápidos */
+.filtros-rapidos {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filtros-rapidos select {
+    padding: 0.5rem;
+    border: 1px solid var(--light-color);
+    border-radius: 4px;
+    background: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-rapidos {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
+
+/* src/pages/financeiro/ControleFinanceiro.css */
+/* ... (mantenha o CSS anterior e adicione estas classes) */
+
+/* Filtros Avançados */
+.filtros-avancados {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filtros-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--light-color);
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.filtros-header .arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.filtros-header .arrow.open {
+    transform: rotate(180deg);
+}
+
+.filtros-content {
+    padding: 1.5rem;
+}
+
+.filtros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: end;
+}
+
+.filtro-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filtro-group label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--dark-color);
+}
+
+.search-input-container {
+    position: relative;
+}
+
+.search-input-container .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.search-input-container input {
+    padding-left: 2.5rem;
+    width: 100%;
+}
+
+.filtro-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    grid-column: 1 / -1;
+}
+
+.resultados {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Encargos */
+.encargos-info {
+    background: var(--light-bg);
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.encargos-info p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.encargos-info small {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.encargos-detalhes {
+    background: var(--light-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--light-color);
+}
+
+.encargo-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.encargo-item:last-child {
+    border-bottom: none;
+}
+
+.encargo-item.total {
+    font-weight: bold;
+    color: var(--primary-color);
+    border-top: 2px solid var(--primary-color);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Formula Preview */
+.formula-preview {
+    background: var(--info-light);
+    border: 1px solid var(--info-color);
+    border-radius: 4px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--info-color);
+    font-family: 'Courier New', monospace;
+}
+
+/* Cards melhorados */
+.remuneracao-card {
+    border: 1px solid var(--light-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    background: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.remuneracao-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.remuneracao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.remuneracao-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+}
+
+.remuneracao-header small {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filtros-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtro-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .remuneracao-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .remuneracao-actions {
+        justify-content: flex-start;
+    }
+}
+
+/* Adicione ao ControleFinanceiro.css */
+
+.status-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.status.encargo {
+    background: var(--warning-light);
+    color: var(--warning-color);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.categoria {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.categoria.fixo {
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.categoria.bonificacao {
+    background: var(--info-light);
+    color: var(--info-color);
+}
+
+.categoria.beneficio {
+    background: var(--secondary-light);
+    color: var(--secondary-color);
+}
+
+.categoria.encargo {
+    background: var(--warning-light);
+    color: var(--warning-color);
+}
+
+.bonificacao-info {
+    background: var(--light-bg);
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.bonificacao-info small {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.info-box {
+    background: var(--info-light);
+    border: 1px solid var(--info-color);
+    border-radius: 4px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--info-color);
+}
+
+.encargos-info {
+    background: var(--light-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--light-color);
+}
+
+.encargo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    color: var(--dark-color);
+}
+
+.formula-preview {
+    background: var(--light-bg);
+    border: 1px solid var(--light-color);
+    border-radius: 4px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark-color);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+/* Adicione ao ControleFinanceiro.css */
+
+/* Tabela de Folha de Pagamento */
+.folha-pagamento-table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.folha-pagamento-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.folha-pagamento-table th {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.folha-pagamento-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.folha-pagamento-table tr:hover {
+    background: var(--light-bg);
+}
+
+.usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-icon {
+    color: var(--text-muted);
+}
+
+.salario-liquido {
+    font-weight: bold;
+    color: var(--success-color);
+}
+
+.acao-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Modal de Remuneração Completa */
+.form-grid-duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.coluna-entrada,
+.coluna-calculos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.coluna-calculos h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.calculos-container {
+    background: var(--light-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.calculo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.calculo-item:last-child {
+    border-bottom: none;
+}
+
+.calculo-item.total {
+    font-weight: bold;
+    border-top: 2px solid var(--primary-color);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+
+.calculo-item.desconto {
+    color: var(--danger-color);
+}
+
+.calculo-item.total-descontos {
+    font-weight: bold;
+    color: var(--danger-color);
+    border-top: 1px solid var(--danger-color);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+
+.calculo-item.salario-liquido {
+    font-weight: bold;
+    color: var(--success-color);
+    font-size: 1.1rem;
+    border-top: 2px solid var(--success-color);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+
+.calculo-separador {
+    height: 1px;
+    background: var(--light-color);
+    margin: 1rem 0;
+}
+
+.beneficios-info {
+    margin-top: 1rem;
+}
+
+.beneficios-info h4 {
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.beneficio-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .form-grid-duas-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .folha-pagamento-table {
+        overflow-x: auto;
+    }
+
+    .folha-pagamento-table table {
+        min-width: 1000px;
+    }
+}
+
+/* Adicione ao ControleFinanceiro.css */
+
+/* Novos estilos para o sistema RH completo */
+.valor-positivo {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+.valor-negativo {
+    color: var(--danger-color);
+    font-weight: 600;
+}
+
+.custo-total {
+    color: var(--warning-color);
+    font-size: 1.2rem;
+}
+
+/* Calculadora de Impostos */
+.calculadora-input {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 2rem;
+}
+
+.resultados-calculadora {
+    background: var(--light-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.resultado-categoria h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.resultado-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.resumo-final {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.resumo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.resumo-item:last-child {
+    border-bottom: none;
+}
+
+/* Gestão de Férias */
+.info-ferias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.programar-ferias {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.ferias-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feria-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--light-color);
+}
+
+.status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.status.programadas {
+    background: var(--info-light);
+    color: var(--info-color);
+}
+
+.status.gozadas {
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.status.vencidas {
+    background: var(--danger-light);
+    color: var(--danger-color);
+}
+
+/* Campos Dinâmicos */
+.campos-dinamicos-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.campo-dinamico-tag {
+    background: var(--light-bg);
+    border: 1px solid var(--light-color);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.campo-dinamico-tag.adicao {
+    border-left: 4px solid var(--success-color);
+}
+
+.campo-dinamico-tag.desconto {
+    border-left: 4px solid var(--danger-color);
+}
+
+/* Botões de Ação Expandidos */
+.acao-buttons {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.btn-icon.info {
+    background: var(--info-light);
+    color: var(--info-color);
+}
+
+.btn-icon.info:hover {
+    background: var(--info-color);
+    color: white;
+}
+
+.btn-icon.warning {
+    background: var(--warning-light);
+    color: var(--warning-color);
+}
+
+.btn-icon.warning:hover {
+    background: var(--warning-color);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .calculadora-input {
+        flex-direction: column;
+    }
+
+    .resultados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-ferias {
+        grid-template-columns: 1fr;
+    }
+
+    .feria-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+/* Adicione ao ControleFinanceiro.css */
+.icon-adicao {
+    color: var(--success-color);
+    margin-left: 0.5rem;
+}
+
+.icon-desconto {
+    color: var(--danger-color);
+    margin-left: 0.5rem;
+}
+
+.campos-dinamicos-section {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-color);
+}
+
+.campo-dinamico-item {
+    background: var(--light-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--success-color);
+}
+
+.campo-dinamico-item.desconto {
+    border-left-color: var(--danger-color);
+}
+/* Adicione ao ControleFinanceiro.css */
+
+/* Seleção Múltipla */
+.selecao-multipla-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.selecao-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.usuario-item.selecionavel {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.usuario-item.selecionavel:hover {
+    background: var(--light-bg);
+}
+
+.usuario-item.selecionavel.selecionado {
+    background: var(--primary-light);
+    border-color: var(--primary-color);
+}
+
+.checkbox-container {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid var(--light-color);
+    border-radius: 4px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Tooltip */
+.info-tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+    cursor: help;
+}
+
+.tooltip-content {
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-color);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.info-tooltip:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Seleção de Funcionários */
+.selecao-funcionarios {
+    background: var(--light-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.selecao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.selecao-header h4 {
+    margin: 0;
+    color: var(--dark-color);
+}
+
+.funcionarios-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--light-color);
+    border-radius: 4px;
+    background: white;
+}
+
+.funcionario-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--light-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.funcionario-checkbox:hover {
+    background: var(--light-bg);
+}
+
+.funcionario-checkbox:last-child {
+    border-bottom: none;
+}
+
+.funcionario-checkbox input {
+    margin-right: 1rem;
+}
+
+.funcionario-info {
+    flex: 1;
+}
+
+.funcionario-info strong {
+    display: block;
+    color: var(--dark-color);
+}
+
+.funcionario-info small {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.selecao-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: var(--info-light);
+    border-radius: 4px;
+    color: var(--info-color);
+    font-size: 0.875rem;
+}
+
+/* Operações */
+.operacao-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background: var(--light-color);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.operacao-soma { background: var(--success-light); color: var(--success-color); }
+.operacao-multiplicacao { background: var(--info-light); color: var(--info-color); }
+.operacao-divisao { background: var(--warning-light); color: var(--warning-color); }
+
+/* Adicione ao ControleFinanceiro.css */
+
+/* Modal Extra Large */
+.modal-extra-large {
+    max-width: 1000px;
+    width: 95%;
+}
+
+/* Form Grid de Três Colunas */
+.form-grid-tres-colunas {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+}
+
+.form-grid-tres-colunas .full-width {
+    grid-column: 1 / -1;
+}
+
+/* Novo Campo Section */
+.novo-campo-section {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid var(--light-color);
+}
+
+.novo-campo-section h4 {
+    margin: 0 0 1rem 0;
+    color: var(--dark-color);
+}
+
+/* Campos Adicionados */
+.campos-adicionados-section {
+    margin-top: 2rem;
+}
+
+.campos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.campo-item {
+    background: white;
+    border: 1px solid var(--light-color);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.campo-item.adicao {
+    border-left: 4px solid var(--success-color);
+}
+
+.campo-item.desconto {
+    border-left: 4px solid var(--danger-color);
+}
+
+.campo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.campo-info {
+    flex: 1;
+}
+
+.campo-info strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.campo-detalhes {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.badge.tipo-adicao {
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.badge.tipo-desconto {
+    background: var(--danger-light);
+    color: var(--danger-color);
+}
+
+.badge.operacao-soma {
+    background: var(--info-light);
+    color: var(--info-color);
+}
+
+.badge.operacao-multiplicacao {
+    background: var(--warning-light);
+    color: var(--warning-color);
+}
+
+.badge.operacao-divisao {
+    background: var(--secondary-light);
+    color: var(--secondary-color);
+}
+
+.campo-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: end;
+}
+
+.campo-resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem;
+    background: var(--light-bg);
+    border-radius: 4px;
+}
+
+.campo-resultado span {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* Cálculos Detalhados */
+.calculo-subtitulo {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.calculo-item.detalhe {
+    font-size: 0.875rem;
+    padding: 0.25rem 0;
+}
+
+.calculo-item.detalhe label {
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .form-grid-tres-colunas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .campo-inputs {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-grid-tres-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .campo-detalhes {
+        justify-content: flex-start;
+    }
+}/* Adicione ao ControleFinanceiro.css */
+
+/* Card Sections */
+.card-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--light-color);
+}
+
+.card-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+.badge-count {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+}
+
+/* Usuário Info Card */
+.usuario-info-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--primary-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.usuario-info-card .icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.usuario-info-card strong {
+    display: block;
+    color: var(--dark-color);
+}
+
+.usuario-info-card p {
+    margin: 0.25rem 0 0 0;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Seleção de Tipo */
+.tipo-campo-selecao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tipo-option input[type="radio"] {
+    display: none;
+}
+
+.tipo-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 2px solid var(--light-color);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.tipo-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.tipo-option input[type="radio"]:checked + .tipo-card {
+    border-color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.tipo-card.adicao .icon {
+    color: var(--success-color);
+    font-size: 1.5rem;
+}
+
+.tipo-card.desconto .icon {
+    color: var(--danger-color);
+    font-size: 1.5rem;
+}
+
+.tipo-content strong {
+    display: block;
+    color: var(--dark-color);
+    margin-bottom: 0.25rem;
+}
+
+.tipo-content span {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Input com Ícone */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon .icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.input-with-icon input {
+    padding-left: 2.5rem;
+    width: 100%;
+}
+
+/* Campos Adicionados */
+.campo-item {
+    background: white;
+    border: 2px solid var(--light-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.campo-item:hover {
+    border-color: var(--primary-color);
+}
+
+.campo-item.adicao {
+    border-left: 4px solid var(--success-color);
+}
+
+.campo-item.desconto {
+    border-left: 4px solid var(--danger-color);
+}
+
+.campo-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.campo-tipo-icon .icon {
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+.campo-tipo-icon .icon-adicao {
+    color: var(--success-color);
+}
+
+.campo-tipo-icon .icon-desconto {
+    color: var(--danger-color);
+}
+
+.campo-info {
+    flex: 1;
+}
+
+.campo-info strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.campo-resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.campo-resultado.adicao {
+    background: var(--success-light);
+    border: 1px solid var(--success-color);
+}
+
+.campo-resultado.desconto {
+    background: var(--danger-light);
+    border: 1px solid var(--danger-color);
+}
+
+.resultado-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.resultado-valor {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.resultado-valor.adicao {
+    color: var(--success-color);
+}
+
+.resultado-valor.desconto {
+    color: var(--danger-color);
+}
+
+/* Cálculos */
+.calculos-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--light-color);
+    position: sticky;
+    top: 1rem;
+}
+
+.calculo-categoria {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin: 1rem 0 0.5rem 0;
+}
+
+.calculo-categoria .icon-adicao {
+    color: var(--success-color);
+}
+
+.calculo-categoria .icon-desconto {
+    color: var(--danger-color);
+}
+
+.calculo-item.base {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.calculo-item.final {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    border-top: 2px solid var(--primary-color);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.calculo-item.subtotal {
+    font-weight: 600;
+    border-top: 1px solid var(--light-color);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.calculo-separador.grossa {
+    border-width: 2px;
+}
+
+.salario-liquido {
+    color: var(--success-color) !important;
+    font-size: 1.4rem;
+}
+
+/* Estados Vazios */
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+.empty-state .icon {
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+/* Botões */
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tipo-campo-selecao {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .campo-inputs {
+        grid-template-columns: 1fr !important;
+    }
+
+    .usuario-info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}/* Adicione ao ControleFinanceiro.css */
+
+/* Badge para Subtração */
+.badge.operacao-subtracao {
+    background: var(--danger-light);
+    color: var(--danger-color);
+}
+
+/* Select para Subtração */
+.select-subtracao {
+    border-color: var(--danger-color);
+}
+
+/* Ícone da Subtração */
+.input-with-icon .fi-minus {
+    color: var(--danger-color);
+}
+
+/* Exemplo de subtração */
+.exemplo {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+}

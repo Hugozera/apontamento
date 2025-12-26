@@ -1,0 +1,48 @@
+# =====================
+# Dependências Node.js
+# =====================
+node_modules/
+frontend/node_modules/
+ServiceAccountKey.json
+
+# =====================
+# Build/compilação
+# =====================
+target/
+frontend/build/
+dist/
+bin/
+out/
+
+# =====================
+# Logs
+# =====================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+*.tmp
+
+# =====================
+# IDEs
+# =====================
+.idea/
+*.iml
+.vscode/
+
+# =====================
+# Environment
+# =====================
+.env*
+!.env.example
+
+# =====================
+# Sistema
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# Arquivos sensíveis
+# =====================
+/src/main/resources/ServiceAccountKey.json

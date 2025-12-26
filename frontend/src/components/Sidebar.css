@@ -1,0 +1,58 @@
+/* Reutilize / adapte este arquivo ao seu HomeScreen.css */
+/* Este CSS já segue o visual moderno que você pediu; integre com seu tema */
+:root{
+    --primary-color: #0f1724;
+    --primary-dark: #0b1220;
+    --secondary-color: #4f9ef8;
+    --muted: #9aa6b2;
+    --sidebar-width: 260px;
+    --sidebar-collapsed-width: 72px;
+    --border-radius: 12px;
+}
+
+.sidebar{
+    width: var(--sidebar-width);
+    background: linear-gradient(180deg, var(--primary-color), var(--primary-dark));
+    color: #eef6ff;
+    position: fixed;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+    transition: width .22s;
+    z-index:1200;
+    box-shadow: 0 6px 30px rgba(7,12,20,0.35);
+}
+.sidebar.collapsed{ width: var(--sidebar-collapsed-width); }
+
+.sidebar-header{ display:flex; align-items:center; justify-content:space-between; padding:16px; }
+.brand{ display:flex; align-items:center; gap:10px; }
+.logo-icon{ width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,var(--secondary-color),#60b0ff); display:flex;align-items:center;justify-content:center;font-weight:700;color:white; }
+.logo{ font-size:1rem; font-weight:700; color:white; }
+
+.toggle-btn{ background:rgba(255,255,255,0.04); border:none; width:38px;height:38px;border-radius:8px;color:white; cursor:pointer; }
+
+.user-profile{ padding:12px; display:flex; flex-direction:column; align-items:center; gap:6px; border-bottom:1px solid rgba(255,255,255,0.03); }
+.profile-img img{ width:56px;height:56px;border-radius:10px; object-fit:cover; }
+.user-info h5{ margin:0; font-size:0.95rem; }
+.user-info .text-muted{ font-size:0.8rem; color:var(--muted); }
+
+.sidebar-nav{ padding:12px; overflow-y:auto; flex:1; }
+.sidebar-nav ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; }
+.menu-item{ display:flex; align-items:center; justify-content:space-between; padding:10px 12px; cursor:pointer; color:#dbe9ff; border-radius:10px; }
+.menu-left{ display:flex; align-items:center; gap:10px; }
+.icon{ width:34px;height:34px; display:flex; align-items:center; justify-content:center; border-radius:8px; background:rgba(255,255,255,0.03); }
+.menu-label{ font-weight:600; }
+.sidebar-nav li:hover{ background:rgba(255,255,255,0.02); transform:translateX(4px); }
+
+.submenu{ padding-left:56px; display:flex; flex-direction:column; gap:6px; margin-top:6px; }
+.submenu li{ padding:8px 12px; border-radius:8px; color:var(--muted); cursor:pointer; }
+.submenu li:hover{ background:rgba(255,255,255,0.02); color:white; }
+
+.sidebar-footer{ padding:12px; border-top:1px solid rgba(255,255,255,0.03); }
+.logout-btn{ display:flex; gap:10px; align-items:center; border:none; background:rgba(255,255,255,0.03); color:white; padding:8px 10px; border-radius:10px; cursor:pointer; }
+
+.main-content{ margin-left: var(--sidebar-width); transition: margin-left .22s; min-height:100vh; }
+.main-content.collapsed{ margin-left: var(--sidebar-collapsed-width); }
+.main-header{ padding:18px; background:white; display:flex; justify-content:space-between; align-items:center; box-shadow:0 6px 18px rgba(8,20,30,0.04); border-bottom-left-radius:12px; border-bottom-right-radius:12px; }
+.content-wrapper{ padding:20px; }
